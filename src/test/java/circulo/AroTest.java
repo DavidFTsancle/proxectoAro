@@ -13,10 +13,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author profesor
+ * @author David Fernandez Teijeiro
  */
 public class AroTest {
     
+    /**
+     *
+     */
     public AroTest() {
     }
     

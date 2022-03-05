@@ -6,40 +6,76 @@ package circulo;
  */
 public class Aro {
 
+    /**
+     * Limite del radio
+     */
     public static final double LIMITERADIO = 0.0;
     
+    /**
+     * Minimo del radio
+     */
     public static final double MINIMO = LIMITERADIO;
 
     private int coordenadaX;
     private int coordenadaY;
     private double radio;
     
+    /**
+     *@Aro
+     */
     public Aro() {
     }
 
+    /**
+     * Valores de las coordenadas X e Y y del radio
+     * @param valorX
+     * @param valorY
+     * @param valorRadio
+     */
     public Aro(int valorX, int valorY, double valorRadio) {
         coordenadaX = valorX;
         coordenadaY = valorY;
         setRadio(valorRadio);
     }
 
+    /**
+     * Obtiene el diametro
+     * @return
+     */
     public double obterDiametro() {
         return getRadio() * 2;
     }
 
+    /**
+     * Obtiene la circunferencia
+     * @return
+     */
     public double obterCircunferencia() {
         return Math.PI * obterDiametro();
     }
 
+    /**
+     * Obtiene la superficie
+     * @return
+     */
     public double obterSuperficie() {
         return Math.PI * getRadio() * getRadio();
     }
 
+    /**
+     * Obtiene el centro
+     * @return
+     */
     @Override
     public String toString() {
         return "Centro = [" + getCoordenadaX() + "," + getCoordenadaY() + "]; Radio = " + getRadio();
     }
 
+    /**
+     * Desplaza las cordenadas del centro
+     * @param trasladarX
+     * @param trasladarY
+     */
     public void trasladarCentro(int trasladarX, int trasladarY){
         setCoordenadaX(getCoordenadaX() + trasladarX);
         setCoordenadaY(getCoordenadaY() + trasladarY);
